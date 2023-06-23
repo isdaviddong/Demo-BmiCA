@@ -31,8 +31,11 @@ namespace WebUI.Pages
 
         public void OnPostCalculate()
         {
+            //get data from UI, and create entity
             var bmi = new BMI() { Height = fieldHeight, Weight = fieldWeight };
+            //create use case
             BMICalculator bMICalculator = new BMICalculator();
+            //calculate BMI, and display result
             BmiResult = bMICalculator.CalculateBMI(bmi);
         }
     }
